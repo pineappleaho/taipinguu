@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>タイプ・ディフェンダー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ゲーム開始画面 -->
+  <div id="startScreen">
+    <h1>タイピング・ディフェンダー</h1>
+    <button id="startBtn">ゲーム開始</button>
+    <p>難易度を選んでスタート！</p>
+    <div id="difficulty">
+      <button class="difficultyBtn" data-difficulty="easy">Easy</button>
+      <button class="difficultyBtn" data-difficulty="normal">Normal</button>
+      <button class="difficultyBtn" data-difficulty="difficult">Difficult</button>
+      <button class="difficultyBtn" data-difficulty="impossible">Impossible</button>
+    </div>
+  </div>
+
+  <!-- ゲーム画面 -->
+  <div id="game" style="display: none;">
+    <div id="player">YOU</div>
+    <div id="info">
+      スコア: <span id="score">0</span><br />
+      ライフ: <span id="life">3</span>
+    </div>
+    <div id="inputArea">
+      <input type="text" id="wordInput" placeholder="敵の単語をタイプ" autocomplete="off" />
+    </div>
+    <div id="gameOver">
+      <div>ゲームオーバー！</div>
+      <div>最終スコア: <span id="finalScore">0</span></div>
+      <button id="restartBtn">再スタート</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
